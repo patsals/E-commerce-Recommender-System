@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>E-commerce Website</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+    <body>
+        <center>
+        <header>
+            <h1> E-commerce Website </h1>
+            <img src="/static/img/ecommerce.png">
+        </header>
+
+        
+        <h2> Recommended products for user {{data[0]}}:</h2>
+
+        <div class="row">
+            <div class="row" id="row1"></div>
+            <div class="description">
+                <h2>Product: {{data[1][0][0]}}</h2>
+                <p>Recommendation rating: {{data[1][0][1]}}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row" id="row2"></div>
+            <div class="description">
+                <h2>Product: {{data[1][1][0]}}</h2>
+                <p>Recommendation rating: {{data[1][1][1]}}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row" id="row3"></div>
+            <div class="description">
+                <h2>Product: {{data[1][2][0]}}</h2>
+                <p>Recommendation rating: {{data[1][2][1]}}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row" id="row4"></div>
+            <div class="description">
+                <h2>Product: {{data[1][3][0]}}</h2>
+                <p>Recommendation rating: {{data[1][3][1]}}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row" id="row5"></div>
+            <div class="description">
+                <h2>Product: {{data[1][4][0]}}</h2>
+                <p>Recommendation rating: {{data[1][4][1]}}</p>
+            </div>
+        </div>
+
+        <a href="/"><button>Return to login</button></a>
+
+        </center>
+        
+
+
+
+        <script>
+            // JavaScript to generate random colored squares
+            function getRandomColor() {
+                // Generate a random hex color code
+                return '#' + Math.floor(Math.random()*16777215).toString(16);
+            }
+        
+            function createRandomColoredSquare(parentId) {
+                // Create a new square element
+                var square = document.createElement('div');
+                square.className = 'square';
+        
+                // Set a random background color
+                square.style.backgroundColor = getRandomColor();
+        
+                // Insert the square into the specified parent element
+                document.getElementById(parentId).appendChild(square);
+            }
+        
+            // Create random colored squares for each row
+            createRandomColoredSquare('row1');
+            createRandomColoredSquare('row2');
+            createRandomColoredSquare('row3');
+            createRandomColoredSquare('row4');
+            createRandomColoredSquare('row5');
+
+        </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>E-commerce Website</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+    <body>
+        <center>
+        <header>
+            <h1> E-commerce Website </h1>
+            <img src="/static/img/ecommerce.png">
+        </header>
+        
+        <div name="login">
+        <form action="{{url_for('home')}}" method="POST">
+            <label for="options">Pick which user id to login as:</label>
+            <select id="options" name="uid">
+                {% for option in options %}
+                    <option value="{{ option }}">{{ option|string}}</option>
+                {% endfor %}
+            </select>
+        
+            <br>
+        </div>
+            <input type="submit", value="login">
+        </form>
+
+
+        </center>
+
+    </body>
+</html>
