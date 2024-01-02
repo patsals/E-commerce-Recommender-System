@@ -20,7 +20,7 @@ It was immediately discovered that there were plenty of problems with our datase
 ### Further Exploration Using Visuals
 Since the scope of this project is to develop a recommender system to predict whether or not a user will purse a product(interaction is labeled as either 'cart' or 'purchase', not 'view' only), it is important to identify any underlying correlations between the different labels and other attributes.
 
-<img src="label_distribution.png"  width="60%">
+<img src="screenshot/label_distribution.png"  width="60%">
 We can see that nearly 89.67% of our data is labeled as 'view' but in order to correctly establish any underlying patterns in the data, we must find the set of products that were __only viewed__ and never actually purchased or put into a cart. 
 After doing so, we get the following two sets of proucts segmented:
 - Number of products that were labeled as 'purchase' or 'cart': 9,837
@@ -28,16 +28,16 @@ After doing so, we get the following two sets of proucts segmented:
 
 Now investigating these groups further:
 
-<img src="brand_popularity_distribution.png"  width="60%">
+<img src="screenshot/brand_popularity_distribution.png"  width="60%">
 Plotting the 30 biggest brands(determined by the number of unique products sold), we can see that only 5 brands have less than 50% of their products labeled as either 'purchase' or 'cart'.
 
-<img src="interaction_distribution.png"  width="60%">
+<img src="screenshot/interaction_distribution.png"  width="60%">
 After examining the number of interactions between the two groups, products taht were labeled as either 'purchase' or 'cart' tended to have a higher number of interactions. This is demonstrated by how wide the whiskers span on the boxplot as well as the overall spread of the data.
 
-<img src="price_distribution.png"  width="60%">
+<img src="screenshot/price_distribution.png"  width="60%">
 If we consider the different distributions between products that were labeled as either 'puchase' or 'cart' and products that were only ever labeled as 'view', we can see that the distribution for the prior spans more wider. Like before, this is also demonstrated by how wide the whiskers span on the boxplot as well as the overall spread of the data.
 
-<img src="category_popularity_distribution.png"  width="60%">
+<img src="screenshot/category_popularity_distribution.png"  width="60%">
 Looking at the 30 most popular product categories(determined by the number of unique products labeled in that category), we can see that there are some categories with less than 50% of their products labeled as either 'purchase' or 'cart'. If we assumed category to have no effect on whether or not a product is purchased or viewed we should expect each bar to be around the red dotted line, but according to our dataset it doesn't seem like this is the case.
 
 
@@ -96,7 +96,7 @@ Here are the following features engineered:
 | Valid      | 0.7299   | 0.7365   | -        |
 | Test       | 0.7084   | 0.7229   | 0.79     |
 
-<img src="rocauc_curve.png"  width="80%">
+<img src="screenshot/rocauc_curve.png"  width="80%">
 
 After training and tuning all of our models, it appears that the Collaborative Filtering Tensorflow model was overall the most successful. Across all of the training, validation, and testing sets it obtained the highest accuracy and F1-score. In addition, its performance demmonstrated on the ROC-AUC curve highlights its ability to make accurate positive predictions.
 
