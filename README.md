@@ -6,7 +6,7 @@ The goal of this project was to compare different approaches to engineering a re
 ## Data
 The dataset utilized for this project was obtained from Kaggle (https://www.kaggle.com/datasets/mkechinov/ecommerce-events-history-in-electronics-store). It contains about 5 months worth of data collected from an online e-commerce website(name is anonymous) by an open source customer data platform. It has 885,129 entries, each corresponding to a user’s interaction on the platform with one of the product listings. 
 
-<img src="data.png"  width="80%">
+<img src="screenshots/data.png"  width="80%">
 
 ## Exploratory Data Analysis
 ### Preliminary Data Quality Checks
