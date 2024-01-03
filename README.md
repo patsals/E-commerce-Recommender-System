@@ -1,7 +1,16 @@
 # E-commerce-Recommender-System
 
 ## Overview
-The goal of this project was to compare different approaches to engineering a recommender system. For this project specifically, we looked at different collaborative filtering models implemented using Sci-kit Learn, H2O ML, and tensorflow in order to come up with a solution for predicting whether or not a user will purchase/put an item into their cart.
+The goal of this project was to compare different approaches to engineering a recommender system. For this project specifically, I looked at different collaborative filtering models implemented using Sci-kit Learn, H2O ML, and tensorflow in order to come up with a solution for predicting whether or not a user will purchase/put an item into their cart. In addition, I utilized flask to build a simple front end for the recommender system that recommends 5 products for the current provided user.
+
+<table>
+  <tr>
+    <td><img src="screenshots/ecommerce_website_login.png"  width="100%"></td>
+    <td><img src="screenshots/ecommerce_website_home.png"  width="100%"></td>
+  </tr>
+</table>
+
+
 
 ## Data
 The dataset utilized for this project was obtained from Kaggle (https://www.kaggle.com/datasets/mkechinov/ecommerce-events-history-in-electronics-store). It contains about 5 months worth of data collected from an online e-commerce website(name is anonymous) by an open source customer data platform. It has 885,129 entries, each corresponding to a user’s interaction on the platform with one of the product listings. 
